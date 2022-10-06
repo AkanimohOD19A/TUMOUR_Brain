@@ -205,19 +205,22 @@ elif APPLICATION_MODE == "Predict":
             Like every other disease, early diagnosis presents a better chance of survival.
         """
     )
+    
+    st.sidebar.markdown("---")
 
     st.sidebar.write("**Use your own image**")
     img_file_buffer = st.sidebar.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
     if img_file_buffer is not None:
         UPLOADED_IMAGE = add_margin(img_file_buffer)
         UPLOADED_IMAGE = "./content/brain-tumour-padded.jpg"
+        DEMO_IMAGE = UPLOADED_IMAGE
         try:
             p_table, p_class = show_table(UPLOADED_IMAGE)
             st.table(p_table)
             if p_class != "notumour":
-                st.warning(f'Predicted class is {p_class}. Please see a Doctor')
+                st.warning(f'Predicted class is  ***{p_class}***. Please see a Doctor')
             elif p_class == "notumour":
-                st.success(f'Clean! Predicted class is {p_class}.')
+                st.success(f'Clean! Predicted class is  ***{p_class}***!')
         except:
             st.error("Unable to fetch a prediction at the moment, try with a larger image")
 
@@ -237,15 +240,16 @@ elif APPLICATION_MODE == "Predict":
         SELFIE_IMAGE = "./content/selfie.jpg"
         add_margin(SELFIE_IMAGE)
         SELFIE_IMAGE = "./content/brain-tumour-padded.jpg"
+        DEMO_IMAGE = SELFIE_IMAGE
         predict_img(SELFIE_IMAGE)
 
         try:
             p_table, p_class = show_table(SELFIE_IMAGE)
             st.table(p_table)
             if p_class != "notumour":
-                st.warning(f'Predicted class is {p_class}. Please see a Doctor')
+                st.warning(f'Predicted class is  ***{p_class}***. Please see a Doctor')
             elif p_class == "notumour":
-                st.success(f'Clean! Predicted class is {p_class}.')
+                st.success(f'Clean! Predicted class is  ***{p_class}***!')
         except:
             st.error("Unable to fetch a prediction at the moment, try with a larger image")
 
@@ -258,11 +262,13 @@ elif APPLICATION_MODE == "Predict":
         try:
             p_table, p_class = show_table(DEMO_IMAGE)
             st.table(p_table)
-            st.success(f'Predicted class is {p_class}')
+            st.success(f'Predicted class is  ***{p_class}***.')
         except:
             st.error("Unable to fetch a prediction at the moment. Try again with a larger image")
 
     st.markdown("---")
+
+    st.caption("N: Predictions are not absolute, professional guidance is advised.")
 
     ## Place Demo
     st.sidebar.text("Placed Image")
