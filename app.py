@@ -103,7 +103,7 @@ def predict_img(img):
     return st.image(result_img)
 
 ## Load Model
-run_model_path = 'last_20_22.pt'
+run_model_path = 'last_07_01_23.pt'
 model = torch.hub.load('ultralytics/yolov5', 'custom', path = run_model_path)
 model.eval()
 
