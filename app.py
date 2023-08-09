@@ -175,7 +175,7 @@ if APPLICATION_MODE == "About the App":
 
     st.markdown(
         """
-        Share your feedback with me - danielakan71@gmail.com
+        Share your feedback with me - danielakantoday@outlook.com
         """
     )
 
