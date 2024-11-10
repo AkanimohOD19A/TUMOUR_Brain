@@ -1,14 +1,14 @@
-pillow<=9.2.0
-numpy<=1.21.0
-streamlit==1.11.0
-torch<=1.8.2 #+cu111
-opencv-python-headless<=4.6.0.66
-imutils<=0.54
-seaborn<=0.11.1
+# Core dependencies
+pillow>=9.2.0
+numpy>=1.21.0
+streamlit>=1.11.0
+torch>=1.8.2
+opencv-python-headless>=4.6.0.66
+imutils>=0.54
+seaborn>=0.11.1
 setuptools
-distutils
 
-# FROM YOLOV5
+# YOLOv5 dependencies
 matplotlib>=3.2.2
 PyYAML>=5.3.1
 requests>=2.23.0
@@ -16,14 +16,14 @@ scipy>=1.4.1
 torchvision>=0.8.1
 tqdm>=4.64.0
 protobuf<4.21.3
-# Logging -------------------------------------
-tensorboard>=2.4.1
-# wandb
 
-# Plotting ------------------------------------
+# Logging
+tensorboard>=2.4.1
+
+# Plotting
 pandas>=1.1.4
 
-# Extras --------------------------------------
-ipython  # interactive notebook
-psutil  # system utilization
-thop>=0.1.1  # FLOPs computation
+# Extras
+ipython
+psutil
+thop>=0.1.1
