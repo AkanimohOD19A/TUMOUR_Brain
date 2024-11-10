@@ -1,29 +1,28 @@
 # Core dependencies
-pillow>=9.2.0
-numpy>=1.21.0
-streamlit>=1.11.0
-torch>=1.8.2
-opencv-python-headless>=4.6.0.66
-imutils>=0.54
-seaborn>=0.11.1
-setuptools
+pillow==9.2.0
+numpy==1.21.0
+streamlit==1.11.0
+torch==1.8.2+cpu
+torchvision==0.8.1+cpu
+opencv-python-headless==4.6.0.66
+imutils==0.5.4
+seaborn==0.11.1
 
 # YOLOv5 dependencies
-matplotlib>=3.2.2
-PyYAML>=5.3.1
-requests>=2.23.0
-scipy>=1.4.1
-torchvision>=0.8.1
-tqdm>=4.64.0
-protobuf<4.21.3
+matplotlib==3.2.2
+PyYAML==5.3.1
+requests==2.23.0
+scipy==1.4.1
+tqdm==4.64.0
+protobuf==4.21.2
 
 # Logging
-tensorboard>=2.4.1
+tensorboard==2.4.1
 
 # Plotting
-pandas>=1.1.4
+pandas==1.1.4
 
 # Extras
-ipython
-psutil
-thop>=0.1.1
+ipython==8.12.0
+psutil==5.9.0
+thop==0.1.1
