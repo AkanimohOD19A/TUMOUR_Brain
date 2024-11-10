@@ -6,6 +6,8 @@ opencv-python-headless<=4.6.0.66
 imutils<=0.54
 seaborn<=0.11.1
 setuptools
+distutils
+
 # FROM YOLOV5
 matplotlib>=3.2.2
 PyYAML>=5.3.1
